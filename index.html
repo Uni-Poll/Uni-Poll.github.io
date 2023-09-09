@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="UniPoll">
+  <meta name="keywords" content="NLG, Text Generation, T5">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>UniPoll</title>
+
+  <meta name="google-site-verification" content="6lbYN1vX7A4sD8SrVniq84UEKyEUSBgxeP7d3FjuuK0" />
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+
+  <link rel="shortcut icon" href="path/to/favicon.ico" type="image/x-icon">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+  </head>
+
+  <style>
+
+    #main{
+        position: relative;;
+        width: 1200px;
+    }
+
+    .box{
+        float: left;
+        padding: 15px 0 0 15px;
+    }
+
+    .pic{
+        width: 500px;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        background-color: #fff;
+    }
+
+    .pic img{
+        width: 500px;
+    }
+
+  </style>
+
+
+
+  <body>
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">UniPoll:</h1>
+          <h2 class="title is-2 publication-title">A Unified Social Media Poll Generation Framework via Multi-Objective Optimization</h2>
+          <div class="is-size-5">
+            <span class="author-block">
+              <a href="https://liyixia.me" style="color:#008AD7;font-weight:normal;">Yixia Li<sup>*</sup></a>,                
+            </span>
+            <span class="author-block">
+              <a href="https://scholar.google.com.hk/citations?user=Yd4lUAYAAAAJ&hl=en" style="color:#008AD7;font-weight:normal;">Rong Xiang</a>,
+            </span>
+            <span class="author-block">
+              <a style="color:#008AD7;font-weight:normal;">Yanlin Song</a>,
+            </span>
+            <span class="author-block">
+              <a href="http://www4.comp.polyu.edu.hk/~jing1li/" style="color:#008AD7;font-weight:normal;">Jing Li</a>
+            </span>            
+          </div>
+
+          <br>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><b style="color:#008AD7; font-weight:normal">&#x25B6 </b> The Hong Kong Polytechnic University </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><a href="https://polyusmart.net" style="color:#008AD7;font-weight:normal;">SMART Lab</a>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>*</sup>Equal Contribution </span>
+            </span>
+            <!-- <span class="author-block"><sup>&#x2691;</sup>Project Lead </span> -->
+          </div>        
+          <br>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2306.06851" target="_blank"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+
+              <span class="link-block">
+                <a href="https://github.com/X1AOX1A/UniPoll" target="_blank" 
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>                          
+
+              <span class="link-block">
+                <a href="https://github.com/X1AOX1A/UniPoll/tree/main/data/WeiboPolls/origin" target="_blank"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="fa fa-database"></i>
+                  </span>
+                  <span>Dataset</span>
+                  </a>
+              </span>
+
+              <span class="link-block">
+                <a href="https://drive.google.com/drive/folders/1hTO5N3NfMNi5AoEPxGhH3KNQ8olWuwUV" target="_blank"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="fa fa-laugh"></i>
+                  </span>
+                  <span>Model</span>
+                  </a>
+              </span>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<link rel="stylesheet" type="text/css" href="js/simple_style.css" />
+<script type="text/javascript" src="js/simple_swiper.js"></script>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Social media platforms are essential outlets for expressing opinions, providing a valuable resource for capturing public viewpoints via text analytics. However, for many users, passive browsing is their preferred mode of interaction, leading to their perspectives being overlooked by text analytics methods. Meanwhile, social media polls have emerged as a practical feature for gathering public opinions, allowing post authors to pose questions with pre-defined answer options for readers to vote on. To broaden the benefits of polls for posts without them, this article explores the automatic generation of a poll from a social media post by leveraging cutting-edge natural language generation (NLG) techniques. However, existing NLG techniques, primarily developed for general-domain texts, may be ineffective when applied to noisy social media data, which often feature implicit context-question-answer relations. To tackle these challenges, we enrich a post context with its comments and propose a novel unified poll generation framework called UniPoll. It employs prompt tuning with multi-objective optimization to bolster the connection exploration between contexts (posts and comments) and polls (questions and answers). Experimental comparisons on a large-scale Chinese Weibo dataset show that UniPoll significantly outperforms T5, the state-of-the-art NLG model, which generates question and answer separately. Comprehensive qualitative and quantitative analyses further underscore the superiority of UniPoll through various evaluation lenses.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+    <br>
+    <br>
+
+
+    <!-- Paper Model. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-six-fifths">
+        <h2 class="title is-3">Model</h2>
+        <div class="content has-text-justified">
+          <p>
+            <b>UniPoll harnesses the power of multi-objective optimization via task prompt tuning to balance the intricate relationships between contexts, questions, and answers. This innovative approach ensures a harmonious and contextually relevant poll generation process, setting new standards for NLG in social media.</b>
+          </p>
+        </div>  
+        <img id="model" width="50%" src="images/model.png">
+        <h3 class="subtitle has-text-centered">
+          <p style="font-family:Times New Roman"><b>The architecture of UniPoll.</b></p>
+        </h3>   
+      </div>
+    </div>
+    <!--/ Paper Model. -->
+    <br>
+    <br>     
+    
+    <!-- Paper Data. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-six-fifths">
+        <h2 class="title is-3">Data</h2>
+        <div class="content has-text-justified">
+          <p>
+            <b>We evaluate our proposed UniPoll model on the WeiboPolls dataset, currently the only available benchmark dataset for poll generation. The WeiboPolls dataset consists of 20,252 poll question pairs gathered from the Chinese social media platform Weibo. Each sample in the dataset includes the context of a post with its comments and an author-created poll with a question and a set of poll answers.</b>
+          </p>
+        </div>  
+        <img id="data" width="40%" src="images/data.png">
+        <h3 class="subtitle has-text-centered">
+          <p style="font-family:Times New Roman"><b>An Exemplary Weibo poll from the WeiboPolls Dataset.</b></p>
+        </h3>   
+      </div>
+    </div>
+    <!--/ Paper Data. -->
+    <br>
+    <br>  
+
+    <!-- Paper Results. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-six-fifths">
+        <h2 class="title is-3">Main Results</h2>
+        <div class="content has-text-justified">
+          <p>
+            <b>UniPoll significantly outperforms all baselines and previous state-of-the-art models in both automated (left) and human (right) scoring. For example, UniPoll achieves a ROUGE-1 score of 47.92, outperforming T5 and DUAL DEC with scores of 45.33 and 34.98 respectively. In the human evaluation, UniPoll achieves the highest scores across different metrics, indicating its effectiveness in generating human-preferred social media polls.</b>
+          </p>
+        </div>  
+
+        <div class="container">
+          <div class="columns">
+              <!-- First Column -->
+              <div class="column is-half">
+                  <img src="images/results.png">
+                  <p class="image-subtitle"><b>Automatic Evaluations Results for Poll Generation.</b></p>
+              </div>
+
+              <!-- Second Column -->
+              <div class="column is-half">
+                  <img src="images/human_eval.png">
+                  <p class="image-subtitle"><b>Human Evaluation Results for Poll Generation.</b></p>
+              </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <!--/ Paper Data. -->
+    <br>
+    <br>  
+
+    <!-- Paper Case Study. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-six-fifths">
+        <h2 class="title is-3">Case Study</h2>
+        <div class="content has-text-justified">
+          <p>
+            <b>UniPoll excels compared to other poll generation models due to its ability to create context-specific, engaging polls. UniPoll's focus on context-question-answer relations results in high-quality polls that stand out, while other models like T5, ChatGPT, and NewBing often produce more general, inconsistent, or less engaging polls.</b>
+          </p>
+        </div>  
+        <img id="model" width="80%" src="images/case_study.png">
+        <h3 class="subtitle has-text-centered">
+          <p style="font-family:Times New Roman"><b>Case Study.</b></p>
+        </h3>   
+      </div>
+    </div>
+    <!--/ Paper Case Study. -->
+  </div>
+</section>
+
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@misc{li2023unipoll,
+  title={UniPoll: A Unified Social Media Poll Generation Framework via Multi-Objective Optimization}, 
+  author={Yixia Li and Rong Xiang and Yanlin Song and Jing Li},
+  year={2023},
+  eprint={2306.06851},
+  archivePrefix={arXiv},
+  primaryClass={cs.CL}
+}
+</code></pre>
+  </div>
+</section>
+
+
+<section class="section" id="Acknowledgement">
+  <div class="container is-max-desktop content">
+    <h2 class="title">Acknowledgement</h2>
+    <p>
+      This website is adapted from <a
+      href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>, licensed under a <a rel="license"
+      href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+      Commons Attribution-ShareAlike 4.0 International License</a>.
+    </p>
+  </div>
+</section>
+
+
+</body>
+
+</html>
