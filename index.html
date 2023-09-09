@@ -17,8 +17,6 @@
   <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
   <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
   <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
-  <link rel="stylesheet"
-        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="./static/css/index.css">
 
   <link rel="shortcut icon" href="path/to/favicon.ico" type="image/x-icon">
@@ -28,6 +26,8 @@
   <script src="./static/js/bulma-carousel.min.js"></script>
   <script src="./static/js/bulma-slider.min.js"></script>
   <script src="./static/js/index.js"></script>
+  <!-- HF-Space Embed Web component-->
+  <script type="module" src="https://gradio.s3-us-west-2.amazonaws.com/3.43.2/gradio.js"></script>
   </head>
 
   <style>
@@ -55,9 +55,6 @@
     }
 
   </style>
-
-
-
   <body>
 
 <section class="hero">
@@ -160,6 +157,14 @@
 
 <link rel="stylesheet" type="text/css" href="js/simple_style.css" />
 <script type="text/javascript" src="js/simple_swiper.js"></script>
+
+<!-- Huggingface Space -->
+<section class="section">
+  <div class="container is-max-desktop" id="gradio">
+    <gradio-app src="https://x1a-unipoll.hf.space"></gradio-app>
+  </div>
+</section>
+<!--/ Huggingface Space -->
 
 <section class="section">
   <div class="container is-max-desktop">
